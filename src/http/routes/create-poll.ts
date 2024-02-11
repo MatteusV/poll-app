@@ -10,7 +10,7 @@ export async function createPoll(app: FastifyInstance) {
     })
 
     const { title, options } = createPollBody.parse(request.body)
-
+    console.log(options)
     const poll = await prisma.poll.create({
       data: {
         title,
